@@ -6,7 +6,6 @@ const connectDB = async (uri)=>{
         await mongoose.connect(uri,{
             useNewUrlParser : true,
         });
-        console.log('Connected With DB:');
     } catch (error) {
         console.log(error);
         throw error;

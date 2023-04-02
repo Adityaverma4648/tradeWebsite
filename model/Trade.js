@@ -10,35 +10,35 @@ const TradeSchema = new Schema({
     required: true, 
   },
   low:{
-    type : Decimal128,
+    type : Number,
     required : true,
   },
   high:{
-    type : Decimal128,
+    type : Number,
     required : true,
   },
   last:{
-    type : Decimal128,
+    type : Number,
     required : true,
   },
   type:{
-    type : Decimal128,
+    type : Number,
     required : true,
   },
   open:{
-    type : Decimal128,
+    type : Number,
     required : true,
   },
   volume:{
-    type : Decimal128,
+    type : Number,
     required : true,
   },
   sell:{
-    type : Decimal128,
+    type : Number,
     required : true,
   },
   buy:{
-    type : Decimal128,
+    type : Number,
     required : true,
   },
   at:{
@@ -49,6 +49,8 @@ const TradeSchema = new Schema({
     type : String,
     required : true,
   },
+},{
+  timestamps : true,
 })
 
 module.exports = mongoose.model("Trade",TradeSchema);

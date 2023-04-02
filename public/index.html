@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="./CSS/App.css">
+
+    <!--  font awesome  -->
+    <script src="https://kit.fontawesome.com/8dc03a4776.js" crossorigin="anonymous"></script>
+    <!--  block ends here -->
      
     <!--  google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,26 +21,36 @@
 
     <!--  Header starts here -->
     <Header class="Header" >
-        <div class="HeaderChild" >
+        <div class="headerChild" >
              <img class="logoImage" src="https://hodlinfo.com/static/media/HODLINFO.8f78fc06.png" alt="logo">
         </div>
-        <div class="HeaderChild" >
-            <select name="rupees" id="rupees">
+        <div class="headerChild child2" >
+            <select name="rupees" class="child2Button" id="rupees">
                 <option value="INR">INR</option>
             </select>
-            <select name="baseUnit" id="baseUnit">
-                <option value="all">all</option>
+            <select name="baseUnit" class="child2Button" id="baseUnit">
+                <option value="BTC">BTC</option>
+                <option value="ETH">ETH</option>
+                <option value="USDT">USDT</option>
+                <option value="XRP">XRP</option>
+                <option value="TRX">TRX</option>
+                <option value="DASH">DASH</option>
+                <option value="ZEC">ZEC</option>
+                <option value="XEM">XEM</option>
+                <option value="IOST">IOST</option>
+                <option value="WIN">WIN</option>
+                <option value="BTT">BTT</option>
+                <option value="WRX">WRX</option>
             </select>
-            <button type="button" id="BuyUnique" >
-                render text
-            </button>
+            <div class="child2Button" id="buyUnique" >
+                <a href="#" >BUY BTC</a>
+            </div>
         </div>
-        <div class="HeaderChild" >
-            <div class="timer">
-                
+        <div class="headerChild child3" >
+            <div class="timer" id="timer" >
             </div>
             <div class="telegramButton">
-                <a href="#" class="btnLink" >
+                <a href="/connect/telegram" class="btn" >
                      Connect Telegram
                 </a>
             </div>
@@ -56,6 +70,7 @@
             <div></div>
             <div></div>
          </div>
+      
     </section>
    <script src="./JS/index.js" ></script>
 </body>

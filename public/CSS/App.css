@@ -38,15 +38,13 @@ body::-webkit-scrollbar{
 .Header{
     width: 100vw;
     height: 12vh;
-    background-color: yellow;
     color: #fff;
     display: flex;
     justify-content:space-between;
     align-items: center;
 }
-.HeaderChild{
+.headerChild{
     width: 30%;
-    background-color: red;
     height: 100%;
     display: flex;
     align-items: center;
@@ -78,7 +76,7 @@ body::-webkit-scrollbar{
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
+    background-color: #2e3241;
     -webkit-transition: .4s;
     transition: .4s;
   }
@@ -118,4 +116,93 @@ body::-webkit-scrollbar{
     border-radius: 50%;
   }
 
+/* the timer */
+
+
+.base-timer {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.base-timer span{
+  position: absolute;
+}
+.base-timer__svg {
+  transform: scaleX(-1);
+}
+
+.base-timer__circle {
+  fill: none;
+  stroke: none;
+}
+
+.base-timer__path-elapsed {
+  stroke-width: 7px;
+  stroke: grey;
+}
+
+.base-timer__path-remaining {
+  stroke-width: 7px;
+  stroke-linecap: round;
+  transform: rotate(90deg);
+  transform-origin: center;
+  transition: 1s linear all;
+  fill-rule: nonzero;
+  stroke: currentColor;
+}
+
+.base-timer__path-remaining.green {
+  color: rgb(65, 184, 131);
+}
+
+.child3 div{
+ margin: 0px 5px;
+}
+.child2{
+  flex-wrap: wrap;
+}
+.btn{
+    text-decoration: none;
+    padding: 0.5rem 0.5rem;
+   background-color: #3dc6c1;
+   border-radius: 9px;
+}
+
+.child2Button{
+    background-color: #2e3241;
+    padding: 8px 8px;
+    color: #fff;
+    border: none;
+    border-radius: 9px;
+}
+.child2Button select , select , div {
+  margin: 0px 10px;
+}
+select:focus{
+  outline: none;
+}
+#buyUnique a{
+  text-decoration: none;
+  color: White;
+  font-size: 13px;
+}
+
+/*  block ends here */
+
+
   /*  header styles ends here ---------------------------------------------------------------------------------------------*/
+
+
+
+  @media only screen and (max-width : 750px){
+    .Header{
+      height: 25vh;
+        flex-direction: column;
+    }
+    .headerChild{
+      width: 100%;
+    }
+  }

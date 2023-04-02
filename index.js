@@ -15,9 +15,12 @@ const PORT = process.env.PORT||5000;
 
 //  path to static directory-----------------------------------------------------------------------------------------------------------------------------------------
 const staticPath  = path.join(__dirname, './public');
+const staticPath1  = path.join(__dirname, "./data/trade.js");
+
 //  using css in my files - css import
 
 app.use(express.static(staticPath));
+app.use(express.static(staticPath1));
 
 // 
 
@@ -26,13 +29,15 @@ app.get("/",(req,res)=>{
 })
 
 app.use("/api",apiRoutes);
+
 const start = async ()=>{
     try {
+        await connectDB(process.env.MONGODB_URI);
        app.listen(PORT,console.log(`SERVER STARTED AT ${PORT}`));
     } catch (error) {
         console.log(`Connection failed : ${error}`)
     }
  
  }
- start();
+start();
  
