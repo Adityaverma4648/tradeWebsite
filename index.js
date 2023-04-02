@@ -3,7 +3,8 @@ const connectDB = require("./config/DB");
 const express  = require('express');
 const path = require("path");
 const apiRoutes = require("./routes/apiRoutes");
-const https = require("https");
+// const data = require("./data/Data.js");
+const Trade = require("./model/Trade")
 
 
 // express instance
@@ -41,3 +42,4 @@ const start = async ()=>{
  }
 start();
  
+

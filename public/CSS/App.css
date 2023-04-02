@@ -192,8 +192,46 @@ select:focus{
 
 /*  block ends here */
 
+.tableContainer{
+  width: 90vw;
+}
+.tableContainer table{
+  width: 100%;
+}
+td, th {
+  text-align: center;
+  padding: 20px;
+  margin: 0px;
+}
+tr {
+  margin: 0px;
+  background-color: #2e3241;
+  border-radius: 9px;
+}
+
 
   /*  header styles ends here ---------------------------------------------------------------------------------------------*/
+ 
+  .averageFetcher{
+    width: 100vw;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .avgFetcherChild{
+     width: 13%;
+     background-color: red;
+  }
+  .avgFetcherChild h3{
+    font-size: 30px;
+  }
+  .center{
+    width: 30%;
+    background-color: yellow;
+    font-size: 35px;
+  }
+
 
 
 

@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const Trade = require("../model/Trade");
+const mydata = require("../data/Data.json");
 
 router.post("/", async (req,res)=>{
      const trade = await Trade.find();
@@ -12,13 +13,24 @@ router.post("/", async (req,res)=>{
      }
 })
 
+router.get("/api",async (req,res)=>{
+     mydata.forEach(async (d)=>{
+          console.log(JSON.stringify(d));
+          // const trade = await Trade.create({
+          //      d
+          // });
+     })
+       res.send(mydata);
+})
+
 router.post("/getData", async (req,res)=>{
      console.log(req.body);
-     const { baseUnit, quoteUnit, low ,high,last ,type ,open , volume , sell , buy , at ,name }  = req.body;
+     const { uid, base_unit, quote_unit, low ,high,last ,type ,open , volume , sell , buy , at ,name }  = req.body;
   
      const trade = await Trade.create({
-          baseUnit,
-          quoteUnit,
+          uid,
+          base_unit,
+          quote_unit,
            low,
            high,
            last,

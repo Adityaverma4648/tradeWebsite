@@ -112,13 +112,7 @@ function setCircleDasharray() {
     .setAttribute("stroke-dasharray", circleDasharray);
 }
 
-var baseUnit = document.getElementById('baseUnit');
-var buyUnique = document.getElementById('buyUnique');
-baseUnit.addEventListener("change",(e)=>{
-    const value = e.target.value;
-    var content = `<a href="#" >BUY ${value}</a>`;
-    buyUnique.innerHTML = content;
-})
+
 
 //  FETCHING dATA 
 
@@ -142,10 +136,36 @@ fetch("http://localhost:7000/api/",{ method: 'POST',headers: {
 }).then((res)=>
     res.json()
 ).then((data)=>{
+
+  var baseUnit = document.getElementById('baseUnit');
+  var buyUnique = document.getElementById('buyUnique');
+  baseUnit.addEventListener("change",(e)=>{
+      const value = e.target.value;
+      
+      var content = `<a href="#" >BUY ${value}</a>`;
+      buyUnique.innerHTML = content;
+       fetchTable(value);
+
+  })
+
+      
+  function fetchTable (value){
     console.log(data);
-    data.map((d)=>{
-        return `<div>
-                  d.
-                </div>`;
+    var topData = document.getElementById("topData");
+    var i = 1;
+    var sum = 0;
+     topData.innerHTML = "";
+    data.forEach((d)=>{
+         sum = sum + d.buy;
+        if(d.base_unit == value.toLowerCase()){
+         var content = `<tr><td>${i++}</td><td>${d.name}</td><td>${d.last}</td><td>${d.buy}/${d.sell}</td><td>${d.volume}</td><td>${d.base_unit}</td></tr>`;
+         topData.innerHTML += content;
+      }   
     })
+    var avg = sum/data.length();
+    alert(avg);
+  }
+  fetchTable("btc")
 })
+
+

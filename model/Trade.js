@@ -1,11 +1,15 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema;
 const TradeSchema = new Schema({
-  baseUnit: {
+  uid : {
+    type : String,
+    required : true
+  },
+  base_unit: {
     type: String,
     required: true,
   },
-  quoteUnit: {
+  quote_unit: {
     type: String,
     required: true, 
   },
