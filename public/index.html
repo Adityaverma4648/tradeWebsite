@@ -21,7 +21,7 @@
 
     <!--  Header starts here -->
     <Header class="Header" >
-        <div class="headerChild" >
+        <div class="headerChild logoContainer" >
              <img class="logoImage" src="https://hodlinfo.com/static/media/HODLINFO.8f78fc06.png" alt="logo">
         </div>
         <div class="headerChild child2" >
@@ -51,6 +51,7 @@
             </div>
             <div class="telegramButton">
                 <a href="/connect/telegram" class="btn" >
+                    <i class="fa fa-paper-plane" ></i>
                      Connect Telegram
                 </a>
             </div>
@@ -62,55 +63,91 @@
      </Header>
      <!--  header block ends here -->
 
-    <section class="App">
+    <section >
          <div class="averageFetcher" id="averageFetcher">
             <div class="avgFetcherChild" >
-                <h3>
-                    5 Mins
+                <h3 class="avgHeading color">
+                   0.11%
+                </h3>
+                <h3 class="avgHeading" >
+                    5Mins
                 </h3>
             </div>
             <div class="avgFetcherChild" >
-                <h3>
-                    1 Hour
+                <h3 class="avgHeading color">
+                   0.05%
+                </h3>
+                <h3 class="avgHeading" >
+                    1Hour
                 </h3>
             </div>
             <div class="avgFetcherChild center">
-               <h1>
-                    Avergae
+                <h5>
+                    Best Price to Trade
+                </h5>
+               <h1 class="avgHeading avgHeadingcenter" >
+                  <i class="fa fa-rupee"></i>  
+                  3,47,954
                </h1>
+               <small style="font-size : 16px" >
+                Average BTC/INR net price including commission
+               </small>
+
             </div>
             <div class="avgFetcherChild" > 
-                <h3>
-                    1 Day
+                <h3 class="avgHeading color">
+                   10.11%
+                </h3>
+                <h3 class="avgHeading" >
+                    1Day
                 </h3>
             </div>
             <div class="avgFetcherChild" >
-                <h3>
-                    7 Days
+                <h3 class="avgHeading color">
+                   20.16%
+                </h3>
+                <h3 class="avgHeading" >
+                    7Days
                 </h3>
             </div>
          </div>
 
-
+<!--  filterred Data -->
          <div class="tableContainer" >
             <table>
                 <thead>
                     <tr>
-                        <td>#</td>
-                        <td>name</td>
-                        <td>Last Traded Price</td>
-                        <td>Buy / Sell Price</td>
-                        <td>volume</td>
-                        <td>base_unit</td>
+                        <th>#</th>
+                        <th>name</th>
+                        <th>Last Traded Price</th>
+                        <th>Buy / Sell Price</th>
+                        <th>volume</th>
+                        <th>base_unit</th>
                     </tr>
                 </thead>
                 <tbody id="topData" >
-                    
                 </tbody>
             </table>
          </div>
-      
     </section>
+    <Footer class="Footer" >
+       <div class="footerChild" >
+        <small  >
+            CopyRights <i class="fa fa-copyright" ></i> 2019
+          </small>
+          <a href="#" class="footerLink" >
+           <small>
+               Support
+           </small>
+          </a>
+       </div>
+       <div class="footerChild align-center" >
+            <a href="#" class="footerButton">
+                Add hodinfo To Home Screen
+            </a>
+       </div>
+
+    </Footer>
    <script src="./JS/index.js" ></script>
 </body>
 </html>

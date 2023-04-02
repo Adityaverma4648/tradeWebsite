@@ -8,30 +8,21 @@
     font-family: 'Roboto', sans-serif;
     /*  font -ends here */
 }
-body {
-    min-height: 100vh;
-    min-width: 100vw;
+body{
+    max-height: 100vh;
+    width: 100vw;
     background : #191d28;
     color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: center;
+    overflow: hidden;
 }
 
 body::-webkit-scrollbar{
     display: none;
 }
-
-.App{
-    background : #191d28;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-}
-
 
 
 /*  header styles ------------------------------------------------------------------------------------------------*/
@@ -42,6 +33,7 @@ body::-webkit-scrollbar{
     display: flex;
     justify-content:space-between;
     align-items: center;
+    /* background-color: #2196F3; */
 }
 .headerChild{
     width: 30%;
@@ -49,8 +41,8 @@ body::-webkit-scrollbar{
     display: flex;
     align-items: center;
     justify-content: center;
+    /* background-color: purple; */
 }
-
 .logoImage{
   width: 60%;
 }
@@ -165,10 +157,11 @@ body::-webkit-scrollbar{
   flex-wrap: wrap;
 }
 .btn{
-    text-decoration: none;
-    padding: 0.5rem 0.5rem;
+   text-decoration: none;
+   padding: 0.7rem 0.2rem;
    background-color: #3dc6c1;
    border-radius: 9px;
+   color: #fff;
 }
 
 .child2Button{
@@ -193,14 +186,35 @@ select:focus{
 /*  block ends here */
 
 .tableContainer{
-  width: 90vw;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0px;
+  /* background-color: #2e3241; */
 }
 .tableContainer table{
-  width: 100%;
+  width: 90vw;
+  padding: 0rem 1rem;
+  display: table;
+  justify-content: center;
+  align-items: center;
 }
-td, th {
+ th {
   text-align: center;
   padding: 20px;
+  margin: 0px;
+  font-family: 'Noto Sans', sans-serif;
+}
+td{
+  text-align: center;
+  padding: 20px;
+  margin: 0px;
+}
+th{
+  font-size: 18px;
+}
+tbody tr{
   margin: 0px;
 }
 tr {
@@ -219,28 +233,103 @@ tr {
     justify-content: center;
     align-items: center;
   }
+  
   .avgFetcherChild{
      width: 13%;
-     background-color: red;
+     display: flex;
+     flex-direction : column;
+     justify-content: center;
+     align-items: center;
   }
   .avgFetcherChild h3{
     font-size: 30px;
   }
+  .avgHeading{
+    color: gray;
+  }
+  .avgHeadingcenter{
+    color: #fff;
+  }
   .center{
     width: 30%;
-    background-color: yellow;
-    font-size: 35px;
+    display: flex;
+    flex-direction : column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vw;
+    text-align : center;
+    color: gray;
+  }
+  
+  .color{
+    color: #3dc6c1;
   }
 
+  /*  footer block start here */
+  .Footer{
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 13vh;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid gray;
+    color: gray;
+  
+  }
+  .footerChild{
+   
+    width: 80vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5px;
+    margin: 2px 0px;
+    margin-right: 4rem;
+  }
+  .align-center{
+     justify-content: center;
+  }
+  .footerButton{
+     border: 1px solid #2196F3;
+     padding: 8px 10px;
+     color: #2196F3;
+    text-decoration: none;
 
-
+  }
+  .footerLink{
+     color: gray;
+    text-decoration: none;
+  }
+  /*  footer ends here */
 
   @media only screen and (max-width : 750px){
     .Header{
-      height: 25vh;
+      height: 20vh;
         flex-direction: column;
     }
     .headerChild{
       width: 100%;
+    }
+    .tableContainer{
+      justify-content: start;
+      overflow-x: scroll;
+    }
+    .tableContainer table{
+       justify-content: start; 
+    }
+    .center{
+      font-size:5vw;
+    }
+    .averageFetcher{
+      padding: 0px 10px;
+      height: 25vh;
+    }
+    .avgFetcherChild h3{
+      font-size: 20px;
     }
   }
