@@ -5,8 +5,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <link rel="stylesheet" href="./CSS/App.css">
+     
+    <!--  google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <!--  fonts block ends here -->
 </head>
 <body>
-    
+
+    <!--  Header starts here -->
+    <Header class="Header" >
+        <div class="HeaderChild" >
+             <img class="logoImage" src="https://hodlinfo.com/static/media/HODLINFO.8f78fc06.png" alt="logo">
+        </div>
+        <div class="HeaderChild" >
+            <select name="rupees" id="rupees">
+                <option value="INR">INR</option>
+            </select>
+            <select name="baseUnit" id="baseUnit">
+                <option value="all">all</option>
+            </select>
+            <button type="button" id="BuyUnique" >
+                render text
+            </button>
+        </div>
+        <div class="HeaderChild" >
+            <div class="timer">
+                
+            </div>
+            <div class="telegramButton">
+                <a href="#" class="btnLink" >
+                     Connect Telegram
+                </a>
+            </div>
+            <label class="toggleTheme switch">
+                <input type="checkbox" >
+                <span class="slider round" ></span>
+            </label>
+        </div>
+     </Header>
+     <!--  header block ends here -->
+
+    <section class="App">
+         <div class="top" id="top">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+         </div>
+    </section>
+   <script src="./JS/index.js" ></script>
 </body>
 </html>
